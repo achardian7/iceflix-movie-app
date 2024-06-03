@@ -10,7 +10,7 @@ const Navlinks = () => {
   const path = usePathname();
 
   return (
-    <div className="flex h-full items-center space-x-3">
+    <div className="hidden h-full items-center space-x-3 lg:flex">
       {navlinks.map((navlink) => (
         <Link
           key={navlink.name}

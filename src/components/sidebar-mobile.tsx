@@ -16,7 +16,7 @@ const SidebarMobile = () => {
   return (
     <aside
       className={cn(
-        "fixed inset-y-0 left-0 flex h-full w-[250px] flex-col bg-gradient-to-r from-red-700 to-red-900 px-3 py-12 duration-150 ease-in-out dark:from-gray-900 dark:to-gray-950 lg:hidden",
+        "fixed inset-y-0 left-0 z-[99] flex h-full w-[250px] flex-col bg-gradient-to-r from-red-700 to-red-900 px-3 py-12 duration-150 ease-in-out dark:from-gray-900 dark:to-gray-950 lg:hidden",
         isOpen ? "translate-x-0" : "-translate-x-full",
       )}
     >

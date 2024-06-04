@@ -11,7 +11,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
       ref={ref}
       {...props}
       className={cn(
-        "rounded-sm bg-red-700 p-2 text-base font-medium hover:bg-red-600",
+        "rounded-sm bg-red-700 p-2 text-base font-medium hover:bg-red-800",
         props.className,
       )}
     >

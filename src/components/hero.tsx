@@ -34,7 +34,7 @@ const Hero = async () => {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 z-40 flex h-full flex-col justify-end space-y-3 bg-gradient-to-r from-gray-700/50 to-white/0 px-3 py-20 text-gray-200 dark:from-black dark:to-transparent dark:text-white md:justify-center md:py-3 lg:px-10">
+        <div className="absolute inset-0 z-40 flex h-full flex-col justify-end space-y-3 bg-gradient-to-r from-gray-700/50 to-white/0 px-3 py-20 text-gray-200 dark:from-black dark:to-transparent dark:text-white md:py-14 lg:px-10">
           <h1 className="text-2xl font-bold md:text-4xl">{movie.title}</h1>
           <p className="hidden max-w-xl text-base text-gray-50 md:block">
             {movie.overview}

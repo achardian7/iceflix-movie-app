@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -7,7 +7,7 @@ import SidebarMobile from "@/components/sidebar-mobile";
 import QueryProvider from "@/components/providers/query-provider";
 import { cn } from "@/utils/cn";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Iceflix",
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          inter.className,
+          font.className,
           "bg-white dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-950",
         )}
       >

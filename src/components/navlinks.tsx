@@ -16,10 +16,8 @@ const Navlinks = () => {
           key={navlink.name}
           href={navlink.path}
           className={cn(
-            "rounded-sm p-2 font-semibold hover:bg-gray-800 dark:hover:bg-red-700",
-            path === navlink.path
-              ? "bg-red-700 dark:bg-blue-800"
-              : "bg-transparent",
+            "rounded-sm p-2 font-semibold hover:bg-red-600",
+            path === navlink.path ? "bg-red-700" : "bg-transparent",
           )}
         >
           <span>{navlink.name}</span>

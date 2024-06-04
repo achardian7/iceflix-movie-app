@@ -21,12 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          font.className,
-          "bg-white dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-950",
-        )}
-      >
+      <body className={cn(font.className, "bg-gray-50 dark:bg-[#111]")}>
         <QueryProvider>
           <ThemeProvider
             attribute="class"

@@ -2,7 +2,7 @@ import Hero from "@/components/hero";
 
 const Home = () => {
   return (
-    <div>
+    <div className="h-[200vh]">
       <Hero />
     </div>
   );

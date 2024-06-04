@@ -19,7 +19,7 @@ const ModeToggle = () => {
   return (
     <Button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-full bg-red-900 p-2 dark:bg-blue-900"
+      className="rounded-full bg-red-900 p-2"
     >
       {theme === "dark" ? (
         <Sun className="h-5 w-5" />

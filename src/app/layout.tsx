@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import SidebarMobile from "@/components/sidebar-mobile";
+import QueryProvider from "@/components/providers/query-provider";
 import { cn } from "@/utils/cn";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,16 +27,18 @@ export default function RootLayout({
           "bg-white dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-950",
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <SidebarMobile />
-          <section className="pt-12">{children}</section>
-        </ThemeProvider>
+        <QueryProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            <SidebarMobile />
+            <section className="pt-12">{children}</section>
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );

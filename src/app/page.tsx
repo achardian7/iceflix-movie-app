@@ -1,9 +1,11 @@
+import CarouselContainer from "@/components/carousel-container";
 import Hero from "@/components/hero";
 
 const Home = () => {
   return (
-    <div className="h-[200vh]">
+    <div>
       <Hero />
+      <CarouselContainer />
     </div>
   );
 };

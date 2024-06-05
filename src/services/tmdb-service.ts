@@ -1,8 +1,8 @@
-import { Detail, MovieList, TvList } from "@/types";
+import { Detail, ImageSizeType, MovieList, TvList } from "@/types";
 
 export class TMDBService {
   private BASE_URL = "https://api.themoviedb.org/3/";
-  private IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
+  private IMAGE_BASE_URL = "https://image.tmdb.org/t/p/";
   private API_KEY =
     process.env.TMDB_API_KEY || process.env.NEXT_PUBLIC_TMDB_API_KEY;
 
@@ -25,8 +25,11 @@ export class TMDBService {
   public getDataByQuery(variant: "movie" | "tv", query: string) {
     return `${this.BASE_URL}search/${variant}?query=${query}&api_key=${this.API_KEY}`;
   }
+  public getTrending(type: "movie" | "tv" | "person") {
+    return `${this.BASE_URL}trending/${type}/day?api_key=${this.API_KEY}`;
+  }
 
-  public getImage(path: string) {
-    return `${this.IMAGE_BASE_URL}${path}`;
+  public getImage(path: string, size: ImageSizeType) {
+    return `${this.IMAGE_BASE_URL}${size}${path}`;
   }
 }

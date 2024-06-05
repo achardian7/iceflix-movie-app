@@ -29,7 +29,7 @@ const Hero = async () => {
     <article className="-mt-12">
       <div className="relative h-screen w-full">
         <Image
-          src={TMDB.getImage(movie.backdrop_path)}
+          src={TMDB.getImage(movie.backdrop_path, "original")}
           alt="movie"
           fill
           className="object-cover"

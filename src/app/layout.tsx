@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Open_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import SidebarMobile from "@/components/sidebar-mobile";
 import QueryProvider from "@/components/providers/query-provider";
 import { cn } from "@/utils/cn";
+import Footer from "@/components/footer";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
             <Header />
             <SidebarMobile />
             <section className="pt-12">{children}</section>
+            <Footer />
           </ThemeProvider>
         </QueryProvider>
       </body>

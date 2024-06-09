@@ -7,6 +7,7 @@ import SidebarMobile from "@/components/sidebar-mobile";
 import QueryProvider from "@/components/providers/query-provider";
 import { cn } from "@/utils/cn";
 import Footer from "@/components/footer";
+import SearchModal from "@/components/search-modal";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
             <SidebarMobile />
             <section className="pt-12">{children}</section>
             <Footer />
+            <SearchModal />
           </ThemeProvider>
         </QueryProvider>
       </body>

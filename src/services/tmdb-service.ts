@@ -22,7 +22,7 @@ export class TMDBService {
     return `${this.BASE_URL}tv/${id}${type && `/${type}`}?api_key=${this.API_KEY}`;
   }
 
-  public getDataByQuery(variant: "movie" | "tv", query: string) {
+  public getDataByQuery(variant: "movie" | "tv" | "person", query: string) {
     return `${this.BASE_URL}search/${variant}?query=${query}&api_key=${this.API_KEY}`;
   }
   public getTrending(type: "movie" | "tv" | "person") {
@@ -30,6 +30,9 @@ export class TMDBService {
   }
 
   public getImage(path: string, size: ImageSizeType) {
+    if (!path) {
+      return "/no-image-icon.png";
+    }
     return `${this.IMAGE_BASE_URL}${size}${path}`;
   }
 }

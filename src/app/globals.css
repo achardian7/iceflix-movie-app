@@ -7,3 +7,7 @@ body,
 :root {
   height: 100%;
 }
+
+.modal-open {
+  overflow-y: hidden;
+}
